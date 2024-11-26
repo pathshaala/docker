@@ -5,5 +5,7 @@ FROM alpine:latest
 RUN apk add --no-cache iputils
 
 # Set the default command to ping Google
-CMD [ "google.com" ]
-ENTRYPOINT [ "ping","-c","5" ]
+ENTRYPOINT ["ping", "-c", "5"]
+
+# Set the default target to google.com
+CMD ["google.com"]
